@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444;
+  background-color: #d1def8;
 }
 
 a {
@@ -40,6 +41,11 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   .copy-fix{
     margin-top: 5%;
   }
+}
+@media (min-width:500px) and (max-width:1000px){
+  .smol-font {
+      font-size: xx-small;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -76,7 +82,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #fff;
+  background: #c7d6f3;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
   font-size: 14px;
@@ -122,7 +128,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   transition: all 0.5s;
   transition: all 0.5s;
   padding: 10px 0;
-  background: #fff;
+  background: #c7d6f3;
   z-index: 997;
 }
 
@@ -178,6 +184,15 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
 }
+.nav-menu b {
+  display: block;
+  position: relative;
+  color: #5c768d;
+  padding: 12px 15px;
+  transition: 0.3s;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   /* color: #428bca; */
@@ -194,7 +209,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   opacity: 0;
   visibility: hidden;
   padding: 10px 0;
-  background: #fff;
+  background: #c7d6f3;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: ease all 0.3s;
 }
@@ -271,7 +286,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   left: -260px;
   width: 260px;
   padding-top: 18px;
-  background: #1f3548;
+  background: #8694d1;
   transition: 0.4s;
 }
 
@@ -1494,4 +1509,76 @@ section {
       color: #3498DB;
       cursor: pointer;
       transition: all 0.3s ease;
+    }
+
+  /*Vertical Carousel*/
+    .vertical.carousel .carousel-control {
+      bottom: auto;
+      width: 100%;
+      height: 15%;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+      background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 100%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0) 100%);
+    }
+    .vertical.carousel .carousel-control.right {
+      top: auto;
+      bottom: 0;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
+      background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    }
+    .vertical.carousel .carousel-control .glyphicon {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+    }
+    .vertical.carousel .carousel-indicators {
+      bottom: auto;
+      top: 50%;
+      left: auto;
+      right: 10px;
+      width: 14px;
+      margin: 0;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+    .vertical.carousel .carousel-inner > .item {
+      left: 0;
+      top: 0;
+    }
+    .vertical.carousel .carousel-inner > .item > img {
+      width: 100%;
+    }
+    .vertical.carousel .carousel-inner > .item.next,
+    .vertical.carousel .carousel-inner > .item.active.right {
+      -webkit-transform: translate3d(0, 100%, 0);
+              transform: translate3d(0, 100%, 0);
+      top: 0;
+    }
+    .vertical.carousel .carousel-inner > .item.prev,
+    .vertical.carousel .carousel-inner > .item.active.left {
+      -webkit-transform: translate3d(0, -100%, 0);
+              transform: translate3d(0, -100%, 0);
+      top: 0;
+    }
+    .vertical.carousel .carousel-inner > .item.next.left,
+    .vertical.carousel .carousel-inner > .item.prev.right,
+    .vertical.carousel .carousel-inner > .item.active {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      top: 0;
+    }
+    .vertical.carousel .carousel-inner > .active,
+    .vertical.carousel .carousel-inner > .next.left,
+    .vertical.carousel .carousel-inner .prev.right {
+      top: 0;
+    }
+    .vertical.carousel .carousel-inner > .next,
+    .vertical.carousel .carousel-inner > .active.right {
+      top: 100%;
+      left: 0;
+    }
+    .vertical.carousel .carousel-inner > .prev,
+    .vertical.carousel .carousel-inner > .active.left {
+      top: -100%;
+      left: 0;
     }
